@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+
+body {
+	background-image: url(img/eu.jpg);
+	font-family: "nunito";
+}
+
+.frame {
+	border-radius: 10%;
+	position: absolute;
+	background-color: #012E40;
+	top: 50%;
+	left: 50%;
+	width: 660px;
+	height: 400px;
+	margin-top: -200px;
+	margin-left: -250px;
+	box-shadow: 8px 16px 16px rgba(0, 0, 0, 0.6);
+}
+
+.frame, .card {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.flip-me {
+	position: absolute;
+	top: 30%;
+	left: 80%;
+	font-size: 20px;
+	transform: rotate(-90deg);
+	color: rgba(255, 255, 255, 0.2);
+}
+
+.front h1 {
+	font-family: 'Dancing Script', cursiva;
+	font-size: 128px;
+	margin: 16px 80px;
+	color: #F24405;
+}
+
+.card:hover .flip {
+	transform: rotateX(180deg) translate3d(0, 0, 0);
+	
+}
+
+.flip {
+	transform-style: preserve-3d;
+	transition: all 0.7s ease-in-out;
+	perspective: 1000px;
+}
+
+.front, .back {
+	-webkit-backface-visibility: hidden;
+	width: 100%;
+	height: 100%;
+	background: #012E40;
+}
+
+.card .back {
+	transform: rotateX(-180deg);
+	position: absolute;
+	top: 0;
+	left: 0;
+	margin: 20px;
+}
+
+.back {
+	letter-spacing: 2px;
+	text-align: center;
+}
+
+.back h2 {
+	font-size: 28px;
+	margin: 8px;
+	color: #FA7F08;
+}
+
+.back h3 {
+	color: #FA7F08;
+	font-family: arial black;
+	font-weight: 250;
+	font-size: 40px;
+	margin: 28px;
+}
+
+.back p {
+	font-size: 20px;
+	color: #026773;
+}
+
+img {
+	width: 32px;
+}
+
+img:hover {
+	width: 46px;
+	cursor: pointer;
+}

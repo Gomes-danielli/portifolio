@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Agenda Pets</title>
+
+	<script type="text/javascript" src="javascript.js"></script>
+
+	<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy" crossorigin="anonymous"></script>
+
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+
+</head>
+<body>
+<nav  class="navbar">
+	<div class="container">
+		<img src="./img/dog.jpg">
+		<h1 class="display-3 fw-bold text-danger">ConsulPet</h1>
+		<img src="./img/cat.jpg">
+	</div>
+</nav>
+
+	<h1 class="display-4 text-center text-primary mb-5">Agenda de Consultas</h1>
+
+	<div class="container">
+		<table class="table table-striped table-hover">
+			<thead>
+				<!-- Cabeçalho agenda -->
+				<tr>
+					<th scope="col">Nome do Dono</th>
+					<th scope="col">Nome do Pet</th>
+					<th scope="col">Tipo de Pet</th>
+					<th scope="col">Telefone para contato</th>
+					<th scope="col">Dia da consulta</th>
+					<th scope="col">horário da consulta</th>
+				</tr>
+			</thead>
+			<tbody>
+				<!-- Agendados -->
+				<tr>
+			    	<td>Ana Maria</td>
+			    	<td>Floquinho</td>
+			    	<td>Cachorro</td>
+					<td>51 1111-1111</td>
+					<td>17-11-2022</td>
+					<td>10:50</td>
+				</tr>
+				<tr>
+			    	<td>João</td>
+			    	<td>Garfield</td>
+			    	<td>Gato</td>
+					<td>51 2222-2222</td>
+					<td>15-11-2022</td>
+					<td>09:20</td>
+				</tr>
+				<tr>
+			    	<td>Joana</td>
+			    	<td>Hino</td>
+			    	<td>Hamster</td>
+					<td>51 3333-3333</td>
+					<td>16-11-2022</td>
+					<td>10:20</td>
+				</tr>
+				<!-- novos agendamentos -->
+				<tr>
+					<th class="text-center table-success" colspan="6" id="Add">Adicionados Recentemente</th>
+				</tr>
+				<tr id="agendamento">
+					
+				</tr>
+			</tbody>
+		</table>
+	</div>
+
+	<div class="m-5">
+		<hr class="border-success border-3 opacity-75">
+	</div>
+
+	<h2 class="text-center text-primary mb-5">Marque sua consulta aqui</h2>
+
+	<div class="container mb-5">
+		<form name="agendar" onsubmit="event.preventDefault()">
+			<div class="row">
+				<div class="mb-3 col">
+					<label for="nomeDono" class="form-label">Nome do Dono:</label>
+					<input type="text" id="nomeDono" name="dono" class="form-control" required>
+				</div>
+				<div class="mb-3 col">
+					<label for="nomePet" class="form-label">Nome do Pet:</label>
+					<input type="text" id="nomePet" name="pet" class="form-control" required>
+				</div>
+				
+			</div>
+			<div class="row">
+				<div class="mb-3 col">
+					<label for="telefone" class="form-label">Telefone para contato:</label>
+					<input type="number" id="telefone" name="telefone" class="form-control" required>
+				</div>
+				<div class="mb-3 col">
+					<label for="diaConsulta" class="form-label">Dia da consulta:</label>
+					<input type="date" id="diaConsulta" name="diaConsulta" class="form-control" value="" required>
+				</div>
+				<div class="mb-3 col">
+					<label for="horaConsulta" class="form-label">Horário da Consulta:</label>
+					<input type="time" id="horaConsulta" name="horaConsulta" class="form-control" required>
+				</div>
+				<div class="row">
+					<div class="mb-3 col form-check">
+						<input type="radio" name="radio" id="cachorro" class="form-check-input" value="Cachorro" required>
+						<label for="cachorro" class="form-label">Cachorro</label>
+					</div>
+					<div class="mb-3 col form-check">
+						<input type="radio" name="radio" id="gato" class="form-check-input" value="Gato" required>
+						<label for="gato" class="form-label">Gato</label>
+					</div>
+					<div class="mb-3 col form-check">
+						<input type="radio" name="radio" id="hamster" class="form-check-input" value="Hamster" required>
+						<label for="hamster" class="form-label">Hamster</label>
+					</div>
+					<div class="mb-3 col form-check">
+						<input type="radio" name="radio" id="porco" class="form-check-input" value="Porco" required>
+						<label for="porco" class="form-label">Porco</label>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-auto">
+				<button type="submit" class="btn btn-success mb-3" onclick="completo(),validaForm()">Agendar</button>
+			</div>
+		</form>
+	</div>
+</body>
+</html>

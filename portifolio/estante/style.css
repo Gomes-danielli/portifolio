@@ -1,0 +1,107 @@
+body{
+			background-color: silver;
+		}
+
+		.inicio{
+			text-align: center;
+			margin-bottom: 0px;	
+			padding: 20px;
+			background-color: blueviolet; 
+		}
+
+		h1{
+			
+			font-family: arial;
+		}
+
+		.sumario{
+			background-color: blueviolet;
+			text-align: center;
+			font-family: cursive;
+			padding: 20px;
+			margin-bottom: 50px;
+			border-bottom-left-radius: 50px;
+			border-bottom-right-radius: 50px;
+		}
+
+		ol{
+			list-style-position: inside;
+		}
+
+		.tituloL{
+			text-align: center; 
+			font-family: fantasy; 
+			font-size: 25px; 
+			color: mediumblue;
+		}
+
+		img{
+			width:30%; 
+			display: block;
+			margin: auto;
+			border-radius: 50px;
+		}
+
+		.pacote{
+			width: 35%;
+			height: 35%;
+			display: inline-block;
+			margin: 5%;
+			border: solid 1px;
+			border-radius: 20px;
+			background-color: gray;
+			padding: 15px;
+		}
+
+		.posicao{
+			display: flex; flex-wrap: wrap;
+		}
+
+		h3{
+			text-align: center;
+		}
+
+		p{
+			text-align: justify;
+		}
+
+		table{
+			text-align: center;
+		}
+
+		tr{
+			background-color: dimgray;
+		}
+
+		th, td{
+			border-style: solid;
+			border-width: 3px;
+			border-color: deepskyblue;
+			padding: 6px;
+		}
+
+		span{
+			color: limegreen;
+			font-weight: bold;
+			font-size: 20px;
+		}
+
+		a {
+			color: orangered;
+		}
+
+		a:link{
+			color: orangered;
+		}
+
+		a:visited{
+			color: darkorange;
+		}
+
+		a:hover{
+			color: red;
+		}
+
+		a:active{
+			color: tomato;
+		}
